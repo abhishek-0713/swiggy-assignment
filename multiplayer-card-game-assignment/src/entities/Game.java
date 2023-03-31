@@ -1,3 +1,8 @@
+package entities;
+
+import entities.Card;
+import entities.Deck;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -7,11 +12,11 @@ public class Game {
     private List<Player> playerList;
     private List<Card> drawPile;
 
-//    private Player winner;
+//    private entities.Player winner;
     private int currentPlayerIndex = 0;
 
 
-    /*----------------    Starting the Game    ---------------*/
+    /*----------------    Starting the entities.Game    ---------------*/
     public void startGame(List<String> playerNames) {
 
         // Initialize the deck and shuffle the cards
@@ -42,7 +47,7 @@ public class Game {
 
 
 
-    /*----------------    Play The Game    ---------------*/
+    /*----------------    Play The entities.Game    ---------------*/
     public void playGame() {
 
         int currentPlayerIndex = 0;
@@ -105,7 +110,7 @@ public class Game {
 
 
 
-    /*----------------    Get Player Card Index    ---------------*/
+    /*----------------    Get entities.Player entities.Card Index    ---------------*/
     private int getPlayerCardIndex(Player player, Card topCard) {
 
         List<Card> hand = player.getCardsInHand();
@@ -154,14 +159,14 @@ public class Game {
     }
 
 
-    /*----------------    Get Next Player    ---------------*/
+    /*----------------    Get Next entities.Player    ---------------*/
     private Player getNextPlayer(int currentPlayerIndex) {
         int nextPlayerIndex = getNextPlayerIndex(currentPlayerIndex);
         return playerList.get(nextPlayerIndex);
     }
 
 
-    /*----------------    Get Next Player Index    ---------------*/
+    /*----------------    Get Next entities.Player Index    ---------------*/
     private int getNextPlayerIndex(int currentPlayerIndex) {
 
         int direction = 1;
@@ -177,7 +182,7 @@ public class Game {
     }
 
 
-    /*----------------    Get Previous Player Index    ---------------*/
+    /*----------------    Get Previous entities.Player Index    ---------------*/
     private int getPreviousPlayerIndex(int currentPlayerIndex) {
 
         int direction = -1;
@@ -192,7 +197,7 @@ public class Game {
         return previousPlayerIndex;
     }
 
-    /*----------------    Is Game Ended     ---------------*/
+    /*----------------    Is entities.Game Ended     ---------------*/
     private boolean isGameEnded() {
 
         for (Player player : playerList) {
@@ -205,7 +210,7 @@ public class Game {
 
 
 
-    /*----------------    Ending the Game    ---------------*/
+    /*----------------    Ending the entities.Game    ---------------*/
     public void endGame() {
 
         Player winner = playerList.get(currentPlayerIndex);

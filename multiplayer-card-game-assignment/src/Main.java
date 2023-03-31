@@ -1,3 +1,5 @@
+import entities.Game;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,12 +16,12 @@ public class Main {
         List<String> playerNames = new ArrayList<>();
         for (int i = 1; i <= numPlayers; i++) {
             System.out.print("Enter name of player " + i + ": ");
-            String playerName = scanner.nextLine();                // Input Player Name
+            String playerName = scanner.nextLine();                // Input entities.Player Name
             playerNames.add(playerName);
         }
 
 
-//        Initialize and Start the Game
+//        Initialize and Start the entities.Game
 
         Game game = new Game();
 
