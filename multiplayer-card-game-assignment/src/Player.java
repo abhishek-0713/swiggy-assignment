@@ -18,10 +18,13 @@ public class Player {
         return cardsInHand;
     }
 
+
+    /*--------   Drawing a card   --------*/
     public void drawCard(Card card) {
         cardsInHand.add(card);
     }
 
+   /*--------   Playing a card   ---------*/
     public Card playCard(int index) {
         if (index < 0 || index >= cardsInHand.size()) {
             return null;
@@ -29,6 +32,8 @@ public class Player {
         return cardsInHand.remove(index);
     }
 
+
+    /*-------   Checking if the player has any valid moves   --------*/
     public boolean isValidMove(Card topCard) {
 
         for (Card card : cardsInHand) {
