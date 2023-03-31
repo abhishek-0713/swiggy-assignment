@@ -1,3 +1,7 @@
+package entities;
+
+import entities.Card;
+
 import java.util.ArrayList;
 import java.util.List;
 
