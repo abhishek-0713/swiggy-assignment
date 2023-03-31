@@ -1,8 +1,7 @@
 # swiggy-assignment - `Multiplayer Card Game`
 Swiggy Round 1 coding test
 
-
-### How to Play : 
+### How to Play the Game : 
 
 1. Download and install an IDE such as `Eclipse` or `IntelliJ IDEA`.
 2. Clone or download the project from the source repository.
