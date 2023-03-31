@@ -23,10 +23,14 @@ public class Deck {
         }
     }
 
+
+    /*------   Shuffling the deck   -------*/
     public void shuffle() {
         Collections.shuffle(cardList);
     }
 
+
+    /*------   Drawing a card from the top   -------*/
     public Card drawGame() {
         if (cardList.isEmpty()) {
             return null;

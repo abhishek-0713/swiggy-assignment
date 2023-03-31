@@ -23,6 +23,9 @@ public class Card {
         return value;
     }
 
+
+//    Comparing cards with the help of equals() and hashCode() methods
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
