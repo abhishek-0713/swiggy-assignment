@@ -1,25 +1,38 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Deck {
-    private ArrayList<Card> cards;
+    private final List<Card> cardList;
 
     public Deck() {
-        cards = new ArrayList<Card>();
-        String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-        String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
-        int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 
-        for (String suit : suits) {
-            for (int i = 0; i < ranks.length; i++) {
-                Card card = new Card(ranks[i], suit, values[i]);
-                cards.add(card);
+        cardList = new ArrayList<>();
+
+        String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
+        String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
+        int[] values = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
+
+        for (int i = 0; i < ranks.length; i++) {
+
+            for (int j = 0; j < suits.length; j++) {
+                Card card = new Card(ranks[i], suits[j], values[i]);
+                cardList.add(card);
             }
+
         }
     }
 
-
-    public void addCard(Card card) {
-        cards.add(card);
+    public void shuffle() {
+        Collections.shuffle(cardList);
     }
+
+    public Card drawGame() {
+        if (cardList.isEmpty()) {
+            return null;
+        }
+        return cardList.remove(0);
+    }
+
 
 }
